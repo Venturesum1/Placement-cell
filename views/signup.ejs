@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="<%= assetPath('css/user_signup.css') %>">
+<div class="user-signup">
+  
+  <form action="/create" method="POST" class="signup-form">
+    <h2>Sign up Form</h2>
+    <input type="text" name="name" placeholder="Enter name" required>
+    <input type="email" name="email" placeholder="Enter email" required>
+    <input type="password" name="password" placeholder="Enter Password" required>
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+    <!-- <label for="userType" >Select User Type:</label>
+    <select name="userType" id="userType" onchange="toggleAdminIdField(this)">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select> -->
+
+    <!-- Additional field for Admin ID -->
+    <!-- <div id="adminIdField" style="display: none;">
+      <input type="text" name="adminId" placeholder="Enter Admin ID">
+    </div> -->
+    <button type="submit">Sign up</button>
+    <a href="/">Already Registered? <span>Sign in here</span></a>
+    <!-- <a id = "social-login" href="/user/auth/google"><i class="fa-solid fa-user-plus"></i> using <i class="fa-brands fa-google"></i></a> -->
+    
+
+  </form>
+</div>
+<style>
+  .user-signup {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #900202;
+    width: 36vw;
+    /* height: 75vh; */
+    border-radius: 5px; }
+  
+  .signup-form h2 {
+    color: white; }
+  
+  .signup-form input {
+    border-radius: 5px;
+    padding: 10px 9px;
+    margin-bottom: 8px;
+    width: 80%;
+    outline: none;
+    border: none;
+    font-size: 0.9rem; }
+  
+  .signup-form button {
+    padding: 14px 20px;
+    margin-top: 8px;
+    border-radius: 5px;
+    background-color: white;
+    color: #0044d4;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600; }
+  
+  .signup-form a {
+    text-decoration: none;
+    color: white;
+    margin: 10px 0; }
+  
+  .signup-form span {
+    font-weight: 600; }
+  
+  #social-login {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black; }
+  
+  .fa-google {
+    margin-right: 5px; }
+  
+</style>
+<!-- <script>
+  function toggleAdminIdField(select) {
+    const adminIdField = document.getElementById('adminIdField');
+    if (select.value === 'admin') {
+      adminIdField.style.display = 'block';
+    } else {
+      adminIdField.style.display = 'none';
+    }
+  }
+</script> -->

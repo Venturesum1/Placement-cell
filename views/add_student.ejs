@@ -1,0 +1,107 @@
+
+<link rel="stylesheet" href="<%= assetPath('css/add-student.css') %>">
+<% if (locals.user) {%>
+  <div class="container-add-student">
+  <p class="container-add-student__heading">Add student</p>
+
+  <form class="add-student" action="/student/create" method="POST">
+
+    <div class="add-student__class name">
+      
+      <input type="text" class="form-control" placeholder="Enter student name" id="name" name="name" required/>
+    </div>
+
+    <div class="add-student__class email">
+      
+      <input type="text" class="form-control" placeholder="Enter student email" id="email" name="email" required/>
+    </div>
+
+    <div class="add-student__class college">
+      
+      <input type="college" class="form-control" placeholder="Enter student college" id="college" name="college" required/>
+    </div>
+
+    <div class="add-student__class placement-status">
+        <label class="add-student__class__label" for="">Placement Status</label>
+        <select id="placement-status" class="form-select" required name="placement_status">
+            <option selected>Not Placed</option>
+            <option>Placed</option>
+        </select>
+    </div>
+
+    <div class="add-student__class batch">
+        
+        <input type="text" class="form-control" id="batch" placeholder="Enter Batch No." name="batch" required/>
+    </div>
+
+    <div class="add-student__class dsa-score">
+      
+      <input type="number" class="form-control" id="dsa-score" name="dsa_score" placeholder="DSA Score" required/>
+    </div>
+
+    
+    <div class="add-student__class webdev-score">
+      
+      <input type="number" class="form-control" id="webdev-score" name="webdev_score" placeholder="WEB Dev Score" required/>
+    </div>
+
+    
+    <div class="add-student__class react-score">
+      
+      <input type="number" class="form-control" id="react-score" name="react_score" placeholder="React Score" required/>
+    </div>    
+    
+    <div class="">
+      <button type="submit" class="add-student__class__button">Add Student</button>
+    </div>
+
+  </form>
+</div>
+</div>
+
+<%} %>
+
+
+<style>
+  .container-add-student {
+    margin: auto 5%; }
+    .container-add-student__heading {
+      font-size: 2rem;
+      color: rgb(128, 0, 0);
+      font-weight: 600;
+      text-transform: uppercase; }
+    .container-add-student .add-student {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; }
+      .container-add-student .add-student__class input {
+        padding: 8px 15px;
+        border: 1.5px solid rgb(128, 0, 0);
+        outline: none;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        width: 25%; }
+      .container-add-student .add-student__class label {
+        margin-left: 5px; }
+      .container-add-student .add-student__class select {
+        padding: 8px 15px;
+        border: 1.5px solid rgb(128, 0, 0);
+        outline: none;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        width: 16%; }
+      .container-add-student .add-student__class__button {
+        padding: 8px 15px;
+        background-color: rgb(128, 0, 0);
+        outline: none;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        width: 28%;
+        margin-bottom: 10px;
+        color: white;
+        border: none; }
+      .container-add-student .add-student__class__button:hover {
+        cursor: pointer;
+        background-color: #480101; }
+  
+</style>
